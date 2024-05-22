@@ -1,0 +1,14 @@
+{
+    "patient": [
+      {
+        "id": "1",
+        "firstName": "Daniel",
+        "lastName": "Smith",
+        "dob": "09/18/1998",
+        "gender": "Male",
+        "admissionDate": "01/03/2023",
+        "dischargeDate": "01/03/2024",
+        "currentBed": "1"
+      }
+    ]
+  }
