@@ -35,6 +35,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const dischargeDateInput = patientForm.querySelector('#dischargeDate').value
     const currentBedInput = patientForm.querySelector('#currentBed').value
 
+    
+
     fetch(`${patientURL}`, {
         method: 'POST',
         body: JSON.stringify({
