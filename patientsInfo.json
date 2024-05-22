@@ -7,8 +7,8 @@
       "dob": "09/18/1998",
       "gender": "Male",
       "admissionDate": "01/03/2023",
-      "dischargeDate": "",
-      "currentBed": "1"
+      "dischargeDate": "kkkj",
+      "currentBed": "4"
     },
     {
       "id": "f4c8d9bb-92c2-4f9b-be11-2cae2c9df7c2",
@@ -29,6 +29,16 @@
       "admissionDate": "d",
       "dischargeDate": "",
       "currentBed": "v"
+    },
+    {
+      "id": "86f9393d-3b67-4431-9c02-b5ee5d5d8563",
+      "firstName": "wwwww",
+      "lastName": "eee",
+      "dob": "123",
+      "gender": "d",
+      "admissionDate": "d",
+      "dischargeDate": "dd",
+      "currentBed": "2"
     }
   ]
 }

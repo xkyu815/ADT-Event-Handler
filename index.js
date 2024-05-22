@@ -74,7 +74,6 @@ document.addEventListener('DOMContentLoaded', function() {
    patientContainer.addEventListener('click', (e) => {
     if (e.target.dataset.action === 'discharge') {
         const editButton = document.querySelector(`#edit-${e.target.dataset.id}`)   // add a edit button
-        //editButton.disabled = true
         const patientData = allPatients.find((patient) => {
             return patient.id == e.target.dataset.id
           })
@@ -82,14 +81,7 @@ document.addEventListener('DOMContentLoaded', function() {
         editForm.innerHTML = `
         <form class = 'form' id='edit-patient' action='index.html' method='post'>
           <form id="patient-form">
-          <input id="edit-firstName" placeholder="${patientData.firstName}">
-          <input id="edit-lastName" placeholder="${patientData.lastName}">
-          <input id="edit-dateOfBirth" placeholder="${patientData.dob}">
-          <p><input id="edit-gender" placeholder="${patientData.gender}">
-          <input id="edit-admissionDate" placeholder="${patientData.admissionDate}">
           <input id="edit-dischargeDate" placeholder="${patientData.dischargeDate}">
-          <input id="edit-currentBed" placeholder="${patientData.currentBed}"></p><br>
-          <input type="submit" name="transfer">
           <input type="submit" name="discharge">
       </form>`
 
@@ -106,45 +98,49 @@ document.addEventListener('DOMContentLoaded', function() {
               'Content-Type': 'application/json'
             }
           }).then( response => response.json() )
-          .then( parent => {
-            editedParent.innerHTML = `
-              <h2>${parent.dischargeDateInput}</h2>
+          .then( patient => {
+            editedPatient.innerHTML = `
+              <h2>${patient.dischargeDateInput}</h2>
             </div>`
             editForm.innerHTML = ""
           })
-      // end of this event Listener for edit submit
+    // end of this event Listener for edit submit
        })
 
-        
-
-
-    //     e.target.parentElement.innerHTML += `
-    //   <div id='edit-patient'>
-    //     <form id="patient-form">
-    //       <input id="edit-dischargeDate" placeholder="${patientData.dischargeDate}">
-    //     </div>`
-    //     const dischargeButton = document.querySelector(`#edit-${e.target.dataset.id}`)
-        // const dischargeDateInput = document.querySelector("#edit-dischargeDate").value
-        //   fetch(`${patientURL}/${patientData.id}`, {
-        //     method: 'PATCH',
-        //     body: JSON.stringify({
-        //         'dischargeDate': dischargeDateInput
-        //     }),
-        //     headers: {
-        //       'Content-Type': 'application/json'
-        //     }
-        //   }).then( response => response.json() )
-        //   .then( parent => {
-        //     editedParent.innerHTML = `
-            
-        //       <h2>${parent.dischargeDateInput}</h2>
-
-        //     </div>`
-        //     editForm.innerHTML = ""
-        //   })
-       // end of this event Listener for edit submit
     } else if (e.target.dataset.action === 'transfer') {
-        console.log('you pressed transfer')
+        const editButton = document.querySelector(`#edit-${e.target.dataset.id}`)   // add a edit button
+        const patientData = allPatients.find((patient) => {
+            return patient.id == e.target.dataset.id
+          })
+        const editForm = patientContainer.querySelector(`#edit-patient-${e.target.dataset.id}`)
+        editForm.innerHTML = `
+        <form class = 'form' id='edit-patient' action='index.html' method='post'>
+          <form id="patient-form">
+          <input id="edit-currentBed" placeholder="${patientData.currentBed}">
+          <input type="submit" name="transfer">
+      </form>`
+
+       editForm.addEventListener("submit",(e) =>{
+        e.preventDefault()
+         const currentBedInput = document.querySelector("#edit-currentBed").value
+     //    const editedPatient = document.querySelector(`#patient-${patientData.id}`)
+          fetch(`${patientURL}/${patientData.id}`, {
+            method: 'PATCH',
+            body: JSON.stringify({
+                'currentBed': currentBedInput
+            }),
+            headers: {
+              'Content-Type': 'application/json'
+            }
+          }).then( response => response.json() )
+          .then( patient => {
+            editedPatient.innerHTML = `
+              <h2>${patient.currentBedInput}</h2>
+            </div>`
+            editForm.innerHTML = ""
+          })
+    // end of this event Listener for edit submit
+       })
       }
   }) // end of eventListener for discharging and transferring a patient
 })
