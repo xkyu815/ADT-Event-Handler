@@ -8,13 +8,16 @@
     <h1>Patient Information</h1>
     <div id='create-patient'>
       <form id="patient-form">
-        <input required id="firstName" placeholder="First Name...">
-        <input required id="lastName" placeholder="Last Name...">
-        <input required id="dob" placeholder="DOB...">
-        <p><input required id="gender" placeholder="gender...">
-        <input required id="admissionDate" placeholder="Admission Date...">
-        <input required id="dischargeDate" placeholder="Discharge Date...">
-        <input id="currentBed" placeholder="Current Bed..."></p><br>
+        <label>First Name<br><input required id="firstName" placeholder="First Name..."></label><br>
+       <p><label>Last Name<br><input required id="lastName" placeholder="Last Name..."></label></p>
+       <p><label>Date of Birth<br><input required type="date" id="dob"></label></p>
+       <p><label>Gender<br><select name = "gender" required id="gender"></label></p>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option></select>
+    
+       <p><label>Admission Date<br><input required type="date" id="admissionDate" placeholder="Admission Date..."></label></p>
+       <p><label>Discharge Date<br><input type="date" id="dischargeDate" placeholder="Discharge Date..."></label></p>
+       <p><label>Current Bed<br><input id="currentBed" placeholder="Current Bed..."></label></p>
         <input type="submit" value="Admission" name="admission"> 
         <input type="submit" value="View" name="view"> 
     </div>

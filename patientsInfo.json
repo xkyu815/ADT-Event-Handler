@@ -39,6 +39,36 @@
       "admissionDate": "d",
       "dischargeDate": "dd",
       "currentBed": "2"
+    },
+    {
+      "id": "94c6852a-949a-4a92-911a-b58de143c90b",
+      "firstName": "Emily",
+      "lastName": "Osborn",
+      "dob": "2024-05-08",
+      "gender": "Female",
+      "admissionDate": "2024-05-06",
+      "dischargeDate": "2024-05-29",
+      "currentBed": "2"
+    },
+    {
+      "id": "8e9dcca7-c096-4169-a777-d147f353b1df",
+      "firstName": "David",
+      "lastName": "Chen",
+      "dob": "2024-05-02",
+      "gender": "Male",
+      "admissionDate": "2024-05-06",
+      "dischargeDate": "",
+      "currentBed": "44"
+    },
+    {
+      "id": "71d7716c-f65d-48bd-8f61-4f9495490074",
+      "firstName": "marry",
+      "lastName": "Li",
+      "dob": "2024-05-02",
+      "gender": "Male",
+      "admissionDate": "2024-05-06",
+      "dischargeDate": "",
+      "currentBed": "e"
     }
   ]
 }
