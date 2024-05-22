@@ -7,28 +7,28 @@
       "dob": "09/18/1998",
       "gender": "Male",
       "admissionDate": "01/03/2023",
-      "dischargeDate": "01/03/2024",
+      "dischargeDate": "",
       "currentBed": "1"
     },
     {
-      "id": "222",
-      "firstName": "222",
-      "lastName": "2222",
-      "dob": "444",
-      "gender": "y",
-      "admissionDate": "2",
-      "dischargeDate": "43",
-      "currentBed": "5"
+      "id": "f4c8d9bb-92c2-4f9b-be11-2cae2c9df7c2",
+      "firstName": "Jessie",
+      "lastName": "3333",
+      "dob": "4",
+      "gender": "2",
+      "admissionDate": "3",
+      "dischargeDate": "werdd",
+      "currentBed": "4"
     },
     {
-      "id": "",
-      "firstName": "",
-      "lastName": "",
-      "dob": "",
-      "gender": "",
-      "admissionDate": "",
+      "id": "e65b1a4b-7a17-4d75-805f-5fa2078cef88",
+      "firstName": "tommy",
+      "lastName": "bj",
+      "dob": "222",
+      "gender": "d",
+      "admissionDate": "d",
       "dischargeDate": "",
-      "currentBed": ""
+      "currentBed": "v"
     }
   ]
 }

@@ -8,15 +8,15 @@
     <h1>Patient Information</h1>
     <div id='create-patient'>
       <form id="patient-form">
-        <input id="id" placeholder="Patient ID...">
-        <input id="firstName" placeholder="First Name...">
-        <input id="lastName" placeholder="Last Name...">
-        <input id="dob" placeholder="DOB...">
-        <p><input id="gender" placeholder="gender...">
-        <input id="admissionDate" placeholder="Admission Date...">
-        <input id="dischargeDate" placeholder="Discharge Date...">
+        <input required id="firstName" placeholder="First Name...">
+        <input required id="lastName" placeholder="Last Name...">
+        <input required id="dob" placeholder="DOB...">
+        <p><input required id="gender" placeholder="gender...">
+        <input required id="admissionDate" placeholder="Admission Date...">
+        <input required id="dischargeDate" placeholder="Discharge Date...">
         <input id="currentBed" placeholder="Current Bed..."></p><br>
-        <input type="submit" value="Add patient">
+        <input type="submit" value="Admission" name="admission"> 
+        <input type="submit" value="View" name="view"> 
     </div>
     <div id='patient-container'></div>
 <script src='index.js'></script>
