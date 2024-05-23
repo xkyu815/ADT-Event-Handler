@@ -7,8 +7,10 @@ document.addEventListener('DOMContentLoaded', function() {
     fetch(`${patientURL}`)
     .then( response => response.json() )  
     .then( patientData => patientData.forEach(function(patient) {
-    const date = new Date(patient.admissionDate);
-    const utcDateString = date.toUTCString();
+    const admitdate = new Date(patient.admissionDate);
+    const utcDateStringAdmit = admitdate.toUTCString();
+    const dischdate = new Date(patient.admissionDate);
+    const utcDateStringDischarge = dischdate.toUTCString();
       allPatients = patientData
       patientContainer.innerHTML += `
       <div id=${patient.id}>
@@ -16,8 +18,8 @@ document.addEventListener('DOMContentLoaded', function() {
         <h4>${patient.lastName}</h4 >
         <h4>Date of Birth: ${patient.dob}</h4>
         <h4>Gender: ${patient.gender}</h4>
-        <h4>Admission Date: ${utcDateString}</h4>
-        <h4>Discharge Date: ${patient.dischargeDate}</h4>
+        <h4>Admission Date: ${utcDateStringAdmit}</h4>
+        <h4>Discharge Date: ${utcDateStringDischarge}</h4>
         <h4>Current Bed: ${patient.currentBed}</h4>
         <button data-id="${patient.id}" id="discharge-${patient.id}" data-action="discharge">Discharge</button>
         <button data-id="${patient.id}" id="transfer-${patient.id}" data-action="transfer">Transfer</button>
