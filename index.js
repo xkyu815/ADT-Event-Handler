@@ -9,13 +9,13 @@ document.addEventListener('DOMContentLoaded', function() {
     .then( patientData => patientData.forEach(function(patient) {
     const admitdate = new Date(patient.admissionDate);
     const utcDateStringAdmit = admitdate.toUTCString();
-    const dischdate = new Date(patient.admissionDate);
+    const dischdate = new Date(patient.dischargeDate);
     const utcDateStringDischarge = dischdate.toUTCString();
       allPatients = patientData
       patientContainer.innerHTML += `
       <div id=${patient.id}>
-        <h4>${patient.firstName}</h4>
-        <h4>${patient.lastName}</h4 >
+        <h4>First Name: ${patient.firstName}</h4>
+        <h4>Last Name: ${patient.lastName}</h4 >
         <h4>Date of Birth: ${patient.dob}</h4>
         <h4>Gender: ${patient.gender}</h4>
         <h4>Admission Date: ${utcDateStringAdmit}</h4>
@@ -92,7 +92,15 @@ document.addEventListener('DOMContentLoaded', function() {
        editForm.addEventListener("submit",(e) =>{
         e.preventDefault()
          const dischargeDateInput = document.querySelector("#edit-dischargeDate").value
-     //    const editedPatient = document.querySelector(`#patient-${patientData.id}`)
+         const message = document.getElementById("edit-patient");
+        message.innerHTML = "";
+  try {
+    if(dischargeDateInput < patientData.dischargeDate) throw "Invalid discharge date!" ;
+  }
+  catch(err) {
+    message.innerHTML = "Input is " + err;
+  }
+        const editedPatient = document.querySelector(`#patient-${patientData.id}`)
           fetch(`${patientURL}/${patientData.id}`, {
             method: 'PATCH',
             body: JSON.stringify({
@@ -120,14 +128,13 @@ document.addEventListener('DOMContentLoaded', function() {
         editForm.innerHTML = `
         <form class = 'form' id='edit-patient' action='index.html' method='post'>
           <form id="patient-form">
-          <input id="edit-currentBed" placeholder="${patientData.currentBed}">
+          <input id="edit-currentBed" type = "number" placeholder="${patientData.currentBed}">
           <input type="submit" name="transfer">
       </form>`
 
        editForm.addEventListener("submit",(e) =>{
         e.preventDefault()
          const currentBedInput = document.querySelector("#edit-currentBed").value
-     //    const editedPatient = document.querySelector(`#patient-${patientData.id}`)
           fetch(`${patientURL}/${patientData.id}`, {
             method: 'PATCH',
             body: JSON.stringify({

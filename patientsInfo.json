@@ -7,178 +7,8 @@
       "dob": "09/18/1998",
       "gender": "Male",
       "admissionDate": "01/03/2023",
-      "dischargeDate": "kkkj",
+      "dischargeDate": "02 Aug 2023 12:54:00 GMT",
       "currentBed": "4"
-    },
-    {
-      "id": "f4c8d9bb-92c2-4f9b-be11-2cae2c9df7c2",
-      "firstName": "Jessie",
-      "lastName": "3333",
-      "dob": "4",
-      "gender": "2",
-      "admissionDate": "3",
-      "dischargeDate": "werdd",
-      "currentBed": "4"
-    },
-    {
-      "id": "e65b1a4b-7a17-4d75-805f-5fa2078cef88",
-      "firstName": "tommy",
-      "lastName": "bj",
-      "dob": "222",
-      "gender": "d",
-      "admissionDate": "d",
-      "dischargeDate": "",
-      "currentBed": "v"
-    },
-    {
-      "id": "86f9393d-3b67-4431-9c02-b5ee5d5d8563",
-      "firstName": "wwwww",
-      "lastName": "eee",
-      "dob": "123",
-      "gender": "d",
-      "admissionDate": "d",
-      "dischargeDate": "dd",
-      "currentBed": "2"
-    },
-    {
-      "id": "94c6852a-949a-4a92-911a-b58de143c90b",
-      "firstName": "Emily",
-      "lastName": "Osborn",
-      "dob": "2024-05-08",
-      "gender": "Female",
-      "admissionDate": "2024-05-06",
-      "dischargeDate": "2024-05-29",
-      "currentBed": "2"
-    },
-    {
-      "id": "8e9dcca7-c096-4169-a777-d147f353b1df",
-      "firstName": "David",
-      "lastName": "Chen",
-      "dob": "2024-05-02",
-      "gender": "Male",
-      "admissionDate": "2024-05-06",
-      "dischargeDate": "",
-      "currentBed": "44"
-    },
-    {
-      "id": "71d7716c-f65d-48bd-8f61-4f9495490074",
-      "firstName": "marry",
-      "lastName": "Li",
-      "dob": "2024-05-02",
-      "gender": "Male",
-      "admissionDate": "2024-05-06",
-      "dischargeDate": "",
-      "currentBed": "e"
-    },
-    {
-      "id": "4f0b5664-9d65-4292-8fbe-ca09bc7016a9",
-      "firstName": "Xiaoke",
-      "lastName": "Yu",
-      "dob": "2024-05-01",
-      "gender": "Female",
-      "admissionDate": "2024-05-08",
-      "dischargeDate": "2024-05-07",
-      "currentBed": "i"
-    },
-    {
-      "id": "58514c13-bd6d-4050-a4bc-23c4e881d836",
-      "firstName": "Xiaoke",
-      "lastName": "Yu",
-      "dob": "2024-05-01",
-      "gender": "Female",
-      "admissionDate": "2024-05-08",
-      "dischargeDate": "2024-05-07",
-      "currentBed": "i"
-    },
-    {
-      "id": "c5ea185d-c9db-445b-8343-23b421dc0ffc",
-      "firstName": "Xiaoke",
-      "lastName": "Yu",
-      "dob": "2024-05-01",
-      "gender": "Female",
-      "admissionDate": "2024-05-08",
-      "dischargeDate": "2024-05-07",
-      "currentBed": "i"
-    },
-    {
-      "id": "6246f863-03e2-4867-938b-f41f6e6022eb",
-      "firstName": "Xiaoke",
-      "lastName": "Yu",
-      "dob": "2024-05-07",
-      "gender": "Male",
-      "admissionDate": -2114380800000,
-      "dischargeDate": "4444",
-      "currentBed": "2"
-    },
-    {
-      "id": "f1ba98f4-06af-4d26-b2e3-5d7e56bc618e",
-      "firstName": "sam",
-      "lastName": "3333",
-      "dob": "2024-05-02",
-      "gender": "Female",
-      "admissionDate": null,
-      "dischargeDate": "",
-      "currentBed": "2222"
-    },
-    {
-      "id": "0d09d8ed-15c8-4528-b2ab-2aec2aba4a4c",
-      "firstName": "Qi",
-      "lastName": "233",
-      "dob": "2024-05-07",
-      "gender": "Male",
-      "admissionDate": "2010, 01, 28",
-      "dischargeDate": "",
-      "currentBed": "5"
-    },
-    {
-      "id": "c69d41bc-3350-436d-8e0f-9d3b5c2a3d85",
-      "firstName": "Jessie",
-      "lastName": "3333",
-      "dob": "2024-05-08",
-      "gender": "Male",
-      "admissionDate": "2010, 01, 28",
-      "dischargeDate": "",
-      "currentBed": "e"
-    },
-    {
-      "id": "06e55eda-510d-4cb2-adbf-27f1a4578f32",
-      "firstName": "sam",
-      "lastName": "3333",
-      "dob": "2024-05-08",
-      "gender": "Male",
-      "admissionDate": "2024-05-13",
-      "dischargeDate": "",
-      "currentBed": "2"
-    },
-    {
-      "id": "7e6d664e-01b5-4933-8095-9931ac9af72a",
-      "firstName": "JJJJ",
-      "lastName": "Wang",
-      "dob": "2024-05-06",
-      "gender": "Male",
-      "admissionDate": "1 Aug 2023 08:54:00",
-      "dischargeDate": "3",
-      "currentBed": "8"
-    },
-    {
-      "id": "7a35d80e-dab7-44e1-b458-58437240c8d2",
-      "firstName": "oooo",
-      "lastName": "12",
-      "dob": "2024-05-14",
-      "gender": "Male",
-      "admissionDate": "1 Aug 2023 08:54:00",
-      "dischargeDate": "",
-      "currentBed": "56"
-    },
-    {
-      "id": "866b5521-818e-4540-a384-12f645d3dce7",
-      "firstName": "111",
-      "lastName": "22",
-      "dob": "2024-05-21",
-      "gender": "Male",
-      "admissionDate": "1 Aug 2023 08:54:00",
-      "dischargeDate": "",
-      "currentBed": "1"
     },
     {
       "id": "9c32b0ae-9644-4a6b-a16d-0900f458ef62",
@@ -187,8 +17,28 @@
       "dob": "2024-05-22",
       "gender": "Male",
       "admissionDate": "1 Aug 2023 08:54:00",
-      "dischargeDate": "",
+      "dischargeDate": "7 Aug 2023 08:54:00",
       "currentBed": "5"
+    },
+    {
+      "id": "846113bb-47c5-41f2-9321-545f78184878",
+      "firstName": "sam",
+      "lastName": "3333",
+      "dob": "2024-05-07",
+      "gender": "Male",
+      "admissionDate": "10 Aug 2023 08:54:00",
+      "dischargeDate": "7 Aug 2023 08:54:00",
+      "currentBed": "7"
+    },
+    {
+      "id": "b6d21621-3a6e-473f-8363-76679f9e44ac",
+      "firstName": "sam",
+      "lastName": "2222",
+      "dob": "2024-05-09",
+      "gender": "Male",
+      "admissionDate": "12 Aug 2023 08:54:00",
+      "dischargeDate": "03 Aug 2023 12:54:00 GMT",
+      "currentBed": "0"
     }
   ]
 }
