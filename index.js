@@ -86,21 +86,19 @@ document.addEventListener('DOMContentLoaded', function() {
         <form class = 'form' id='edit-patient' action='index.html' method='post'>
           <form id="patient-form">
           <input id="edit-dischargeDate" placeholder="${patientData.dischargeDate}">
-          <input type="submit" name="discharge">
+          <input id = "submit-discharge" type="submit" name="discharge">
+          <span class="error" aria-live="polite"></span>
       </form>`
-
-       editForm.addEventListener("submit",(e) =>{
+      editForm.addEventListener("submit",(e) =>{
         e.preventDefault()
-         const dischargeDateInput = document.querySelector("#edit-dischargeDate").value
-         const message = document.getElementById("edit-patient");
+    //    const errorMessage = document.getElementsByClassName("error")
+        const dischargeDateInput = document.querySelector("#edit-dischargeDate").value
+        const message = document.getElementById("edit-patient");
         message.innerHTML = "";
-  try {
-    if(dischargeDateInput < patientData.dischargeDate) throw "Invalid discharge date!" ;
-  }
-  catch(err) {
-    message.innerHTML = "Input is " + err;
-  }
-        const editedPatient = document.querySelector(`#patient-${patientData.id}`)
+        if(dischargeDateInput < patientData.admissionDate) {
+        throw "Invalid discharge date!";
+        // errorMessage.textContent = "Invalid discharge date!";
+          } else { const editedPatient = document.querySelector(`#patient-${patientData.id}`)
           fetch(`${patientURL}/${patientData.id}`, {
             method: 'PATCH',
             body: JSON.stringify({
@@ -115,10 +113,10 @@ document.addEventListener('DOMContentLoaded', function() {
               <h2>${patient.dischargeDateInput}</h2>
             </div>`
             editForm.innerHTML = ""
-          })
-    // end of this event Listener for edit submit
+          })}
+      // end of this event Listener for edit submit
        })
-
+      
     } else if (e.target.dataset.action === 'transfer') {
         const editButton = document.querySelector(`#edit-${e.target.dataset.id}`)   // add a edit button
         const patientData = allPatients.find((patient) => {
@@ -131,7 +129,7 @@ document.addEventListener('DOMContentLoaded', function() {
           <input id="edit-currentBed" type = "number" placeholder="${patientData.currentBed}">
           <input type="submit" name="transfer">
       </form>`
-
+      
        editForm.addEventListener("submit",(e) =>{
         e.preventDefault()
          const currentBedInput = document.querySelector("#edit-currentBed").value
@@ -155,5 +153,8 @@ document.addEventListener('DOMContentLoaded', function() {
       }
   }) // end of eventListener for discharging and transferring a patient
 })
+
+
+  
 
 
