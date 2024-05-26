@@ -95,7 +95,10 @@ document.addEventListener('DOMContentLoaded', function() {
         const dischargeDateInput = document.querySelector("#edit-dischargeDate").value
         const message = document.getElementById("edit-patient");
         message.innerHTML = "";
-        if(dischargeDateInput < patientData.admissionDate) {
+        var date1 = new Date(dischargeDateInput)
+        var date2 = new Date(patientData.admissionDate)
+        console.log(date1)
+        if(date1.getTime() < date2.getTime()) {
         throw "Invalid discharge date!";
         // errorMessage.textContent = "Invalid discharge date!";
           } else { const editedPatient = document.querySelector(`#patient-${patientData.id}`)
