@@ -32,21 +32,28 @@ document.addEventListener('DOMContentLoaded', function() {
 
     patientForm.addEventListener('submit', (e) => {
     e.preventDefault();
-//    const idInput = patientForm.querySelector('#id').value
+    // Sanity check of the input names
+    function capitalize(str){
+      const lower = str.toLowerCase()
+      return str.charAt(0).toUpperCase() + lower.slice(1)
+    }
     const firstNameInput = patientForm.querySelector('#firstName').value
+    const formattedFirstName = capitalize(firstNameInput)
     const lastNameInput = patientForm.querySelector('#lastName').value
+    const formattedLastName = capitalize(lastNameInput)
     const dobInput = patientForm.querySelector('#dob').value
     const genderInput = patientForm.querySelector('#gender').value
     const admissionDateInput = patientForm.querySelector('#admissionDate').value
     const dischargeDateInput = patientForm.querySelector('#dischargeDate').value
     const currentBedInput = patientForm.querySelector('#currentBed').value
 
+    
     fetch(`${patientURL}`, {
         method: 'POST',
         body: JSON.stringify({
             id: crypto.randomUUID(),
-            firstName: firstNameInput,
-            lastName: lastNameInput,
+            firstName: formattedFirstName,
+            lastName: formattedLastName,
             dob: dobInput,
             gender: genderInput,
             admissionDate: admissionDateInput,
@@ -87,7 +94,7 @@ document.addEventListener('DOMContentLoaded', function() {
           <form id="patient-form">
           <input id="edit-dischargeDate" placeholder="${patientData.dischargeDate}">
           <input id = "submit-discharge" type="submit" name="discharge">
-          <span class="error" aria-live="polite"></span>
+          <span class="error"></span>
       </form>`
       editForm.addEventListener("submit",(e) =>{
         e.preventDefault()
@@ -121,7 +128,6 @@ document.addEventListener('DOMContentLoaded', function() {
        })
       
     } else if (e.target.dataset.action === 'transfer') {
-        const editButton = document.querySelector(`#edit-${e.target.dataset.id}`)   // add a edit button
         const patientData = allPatients.find((patient) => {
             return patient.id == e.target.dataset.id
           })
@@ -131,6 +137,7 @@ document.addEventListener('DOMContentLoaded', function() {
           <form id="patient-form">
           <input id="edit-currentBed" type = "number" placeholder="${patientData.currentBed}">
           <input type="submit" name="transfer">
+          <span id="error"></span>
       </form>`
       
        editForm.addEventListener("submit",(e) =>{
@@ -146,7 +153,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
           let x = validBed()
           if (x === false){
-            throw "Invalid current bed"
+           throw "Invalid current bed" 
           } else{
           fetch(`${patientURL}/${patientData.id}`, {
             method: 'PATCH',

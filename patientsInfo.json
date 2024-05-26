@@ -7,8 +7,8 @@
       "dob": "2024-06-08",
       "gender": "Male",
       "admissionDate": "1 Aug 2024 08:54:00",
-      "dischargeDate": "Thu, 01 Aug 2024 12:54:00 GMT",
-      "currentBed": "801"
+      "dischargeDate": "10/22/2026",
+      "currentBed": "8"
     },
     {
       "id": "6755e0a5-7127-4163-8cd4-62dcb1f23977",
@@ -27,8 +27,38 @@
       "dob": "2024-05-06",
       "gender": "Male",
       "admissionDate": "1 Aug 2023 08:54:00",
+      "dischargeDate": "Tue, 01 Aug 2023 12:54:23 GMT",
+      "currentBed": "2"
+    },
+    {
+      "id": "e26450b8-1350-4e75-ad1d-06d7eea7bd82",
+      "firstName": "BRIAN",
+      "lastName": "NG",
+      "dob": "2024-05-07",
+      "gender": "Male",
+      "admissionDate": "02/03/2001",
       "dischargeDate": "",
       "currentBed": "2"
+    },
+    {
+      "id": "cd1baef8-2a63-499c-bafa-384868b6aa7f",
+      "firstName": "George",
+      "lastName": "Ge",
+      "dob": "2024-05-30",
+      "gender": "Male",
+      "admissionDate": "1 Aug 2023 08:54:00",
+      "dischargeDate": "",
+      "currentBed": "5"
+    },
+    {
+      "id": "7bc90432-1e19-4a4b-a647-378e4544ca14",
+      "firstName": "Tommylyyy",
+      "lastName": "Hang",
+      "dob": "2024-05-09",
+      "gender": "Male",
+      "admissionDate": "1 Aug 2023 08:54:00",
+      "dischargeDate": "",
+      "currentBed": "5"
     }
   ]
 }
