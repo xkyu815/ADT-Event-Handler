@@ -132,7 +132,19 @@ document.addEventListener('DOMContentLoaded', function() {
       
        editForm.addEventListener("submit",(e) =>{
         e.preventDefault()
-         const currentBedInput = document.querySelector("#edit-currentBed").value
+        const currentBedInput = document.querySelector("#edit-currentBed").value
+        function validBed(){
+          for (i=0;i<allPatients.length;i++){
+            if (allPatients[i].currentBed === currentBedInput || currentBedInput < 0){
+              return false
+            }
+          }
+          return true
+        }
+          let x = validBed()
+          if (x === false){
+            throw "Invalid current bed"
+          } else{
           fetch(`${patientURL}/${patientData.id}`, {
             method: 'PATCH',
             body: JSON.stringify({
@@ -147,7 +159,7 @@ document.addEventListener('DOMContentLoaded', function() {
               <h2>${patient.currentBedInput}</h2>
             </div>`
             editForm.innerHTML = ""
-          })
+          })}
     // end of this event Listener for edit submit
        })
       }
