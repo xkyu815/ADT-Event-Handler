@@ -2,8 +2,7 @@
 
 The goal of this project is to create a simplified ADT (Admission, Discharge, Transfer) event
 handling system using JavaScript. This system will simulate the processing of patient admission,
-discharge, and transfer events in a healthcare setting. The candidate is expected to demonstrate
-their proficiency in JavaScript, event handling, and basic data manipulation.
+discharge, and transfer events in a healthcare setting. 
 
 ## Setup instructions
 Use JSON to store patients information. Download and run our JSON server.
