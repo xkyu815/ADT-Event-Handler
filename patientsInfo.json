@@ -8,7 +8,7 @@
       "gender": "Male",
       "admissionDate": "1 Aug 2024 08:54:00",
       "dischargeDate": "10/22/2026",
-      "currentBed": "8"
+      "currentBed": "99"
     },
     {
       "id": "6755e0a5-7127-4163-8cd4-62dcb1f23977",
@@ -17,7 +17,7 @@
       "dob": "2024-05-08",
       "gender": "Male",
       "admissionDate": "1 Aug 2023 08:54:00",
-      "dischargeDate": "1 July 2023 08:54:00",
+      "dischargeDate": "2009-09-88",
       "currentBed": "1"
     },
     {
@@ -47,7 +47,7 @@
       "dob": "2024-05-30",
       "gender": "Male",
       "admissionDate": "1 Aug 2023 08:54:00",
-      "dischargeDate": "",
+      "dischargeDate": "02/04-2028",
       "currentBed": "5"
     },
     {
@@ -59,6 +59,36 @@
       "admissionDate": "1 Aug 2023 08:54:00",
       "dischargeDate": "",
       "currentBed": "5"
+    },
+    {
+      "id": "c676cc6d-29b4-44ea-a2c7-3a24086652c8",
+      "firstName": "Xddj",
+      "lastName": "Yyy",
+      "dob": "2024-05-13",
+      "gender": "Female",
+      "admissionDate": "2023-04-28",
+      "dischargeDate": "",
+      "currentBed": "6721"
+    },
+    {
+      "id": "3befef10-d3ee-4ffa-8324-accc644a96f7",
+      "firstName": "Bob",
+      "lastName": "Thom",
+      "dob": "2024-05-08",
+      "gender": "Male",
+      "admissionDate": "2021-07-28",
+      "dischargeDate": "01 Jan 2023 10:00:00 ",
+      "currentBed": "777"
+    },
+    {
+      "id": "d168fe1c-6771-45d8-9aad-f3cbd9b5b958",
+      "firstName": "Bill",
+      "lastName": "Thom",
+      "dob": "2024-06-07",
+      "gender": "Male",
+      "admissionDate": "2",
+      "dischargeDate": "3",
+      "currentBed": "2222"
     }
   ]
 }

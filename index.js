@@ -3,9 +3,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const patientURL = 'http://localhost:3000/patient'
     const patientForm = document.querySelector('#patient-form')
     let allPatients = []
-
+    
     fetch(`${patientURL}`)
-    .then( response => response.json() )  
+    .then( response => response.json() 
+     )  
     .then( patientData => patientData.forEach(function(patient) {
     const admitdate = new Date(patient.admissionDate);
     const utcDateStringAdmit = admitdate.toUTCString();
@@ -94,7 +95,6 @@ document.addEventListener('DOMContentLoaded', function() {
           <form id="patient-form">
           <input id="edit-dischargeDate" placeholder="${patientData.dischargeDate}">
           <input id = "submit-discharge" type="submit" name="discharge">
-          <span class="error"></span>
       </form>`
       editForm.addEventListener("submit",(e) =>{
         e.preventDefault()
@@ -104,9 +104,9 @@ document.addEventListener('DOMContentLoaded', function() {
         message.innerHTML = "";
         var date1 = new Date(dischargeDateInput)
         var date2 = new Date(patientData.admissionDate)
-        console.log(date1)
         if(date1.getTime() < date2.getTime()) {
-        throw "Invalid discharge date!";
+          editForm.after(document.createElement("span"),'Invalid discharge date');
+          throw "Invalid discharge date";
         // errorMessage.textContent = "Invalid discharge date!";
           } else { const editedPatient = document.querySelector(`#patient-${patientData.id}`)
           fetch(`${patientURL}/${patientData.id}`, {
@@ -137,7 +137,6 @@ document.addEventListener('DOMContentLoaded', function() {
           <form id="patient-form">
           <input id="edit-currentBed" type = "number" placeholder="${patientData.currentBed}">
           <input type="submit" name="transfer">
-          <span id="error"></span>
       </form>`
       
        editForm.addEventListener("submit",(e) =>{
@@ -153,6 +152,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
           let x = validBed()
           if (x === false){
+          editForm.after(document.createElement("span"),'Invalid current bed');
            throw "Invalid current bed" 
           } else{
           fetch(`${patientURL}/${patientData.id}`, {
